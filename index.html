@@ -16,24 +16,15 @@
   <div class="color blue" id="blue"></div>
 </div>
 <script>
-  $('#green').mouseenter( function(){
-      $('#texte').css('color', 'green');
+ $(function(){
+    $('.color').mouseover(function(){
+      divColor = $(this).attr('id');
+      $('#texte').css('color', divColor);
     });
-  $('#green').mouseleave( function(){
+    $('.color').mouseout(function(){
       $('#texte').css('color', 'black');
-    });
-  $('#red').mouseenter( function(){
-      $('#texte').css('color', 'red');
-    });
-  $('#red').mouseleave( function(){
-      $('#texte').css('color', 'black');
-    });
-  $('#blue').mouseenter( function(){
-      $('#texte').css('color', 'blue');
-    });
-  $('#blue').mouseleave( function(){
-      $('#texte').css('color', 'black');
-    });
+  });
+}); 
 </script>
 </body>
 </html>
